@@ -1,3 +1,4 @@
+import 'package:awareseries/src/authentication/loginPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -31,7 +32,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
 
   void _onIntroEnd(context) {
     Navigator.of(context).push(
-      MaterialPageRoute(builder: (_) => HomePage()),
+      MaterialPageRoute(builder: (_) => LoginPage()),
     );
   }
 
@@ -54,11 +55,22 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
           fontSize: 28.0, fontWeight: FontWeight.w700, color: Colors.white),
       bodyTextStyle: bodyStyle,
       descriptionPadding: EdgeInsets.fromLTRB(1.0, 1.0, 1.0, 1.0),
-      pageColor: Colors.indigo,
+
+      boxDecoration: BoxDecoration(
+    gradient: LinearGradient(
+        stops: [0.3, 5.0],
+    begin: Alignment.topCenter,
+        end: Alignment.bottomCenter,
+        colors: [Colors.indigoAccent, Colors.indigo])),
+      //pageColor:
+
       imagePadding: EdgeInsets.zero,
     );
 
     return Container(
+
+
+
 
       child: IntroductionScreen(
         key: introKey,
@@ -101,6 +113,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
           PageViewModel(
            title: "",
             bodyWidget: Container(
+
                 child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
