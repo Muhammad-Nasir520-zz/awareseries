@@ -16,12 +16,12 @@ class _SignUpState extends State<SignUp> {
     return Scaffold(
       body: Container(
 
-        decoration: BoxDecoration(
-            gradient: LinearGradient(
-                stops: [0.3, 5.0],
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [Colors.indigoAccent, Colors.indigo])),
+        // decoration: BoxDecoration(
+        //     gradient: LinearGradient(
+        //         stops: [0.3, 5.0],
+        //         begin: Alignment.topCenter,
+        //         end: Alignment.bottomCenter,
+        //         colors: [Colors.indigoAccent, Colors.indigo])),
         child: Container(
           margin: EdgeInsets.only(left: 20,right: 20),
           child: ListView(
@@ -50,11 +50,32 @@ class _SignUpState extends State<SignUp> {
                       borderSide: BorderSide(color: Colors.indigo, width: 2.0),
                       borderRadius: BorderRadius.circular(4),
                     ),
+                    hintText: "Name",
+                  ),
+                ),
+              ),
+              SizedBox(height: 15,),
+              Container(
+                child: TextFormField(
+                  textInputAction: TextInputAction.next,
+                  keyboardType: TextInputType.emailAddress,
+                  decoration: InputDecoration(
+                    contentPadding: EdgeInsets.symmetric(vertical: 2, horizontal: 8),
+                    fillColor: Colors.white,
+                    filled: true,
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.grey, width: 1.0),
+                      borderRadius: BorderRadius.circular(4),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.indigo, width: 2.0),
+                      borderRadius: BorderRadius.circular(4),
+                    ),
                     hintText: "Email",
                   ),
                 ),
               ),
-              SizedBox(height: 20,),
+              SizedBox(height: 15,),
               Container(
                 child: TextFormField(
                   textInputAction: TextInputAction.done,
@@ -93,7 +114,7 @@ class _SignUpState extends State<SignUp> {
                 child: MaterialButton(
                   onPressed: () {
                   },
-                  color: Colors.black,
+                  color: Colors.indigo,
                   elevation: 0,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50),

@@ -1,6 +1,9 @@
 
 
+
 import 'package:awareseries/src/authentication/signupPage.dart';
+import 'package:awareseries/src/screen/homepage.dart';
+import 'package:awareseries/src/screen/navigation/navhome.dart';
 import 'package:flutter/material.dart';
 class LoginPage extends StatefulWidget {
   @override
@@ -14,12 +17,12 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       body: Container(
 
-        decoration: BoxDecoration(
-            gradient: LinearGradient(
-                stops: [0.3, 5.0],
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [Colors.indigoAccent, Colors.indigo])),
+        // decoration: BoxDecoration(
+        //     gradient: LinearGradient(
+        //         stops: [0.3, 5.0],
+        //         begin: Alignment.topCenter,
+        //         end: Alignment.bottomCenter,
+        //         colors: [Colors.indigoAccent, Colors.indigo])),
         child: Container(
           margin: EdgeInsets.only(left: 20,right: 20),
           child: ListView(
@@ -90,8 +93,11 @@ class _LoginPageState extends State<LoginPage> {
                 height: 40.0,
                 child: MaterialButton(
                   onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (_) => HomePage()),
+                    );
                   },
-                  color: Colors.black,
+                  color: Colors.indigo,
                   elevation: 0,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50),
@@ -103,7 +109,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
               Align(
-                alignment: Alignment.centerRight,
+                alignment: Alignment.center,
                 child: FlatButton(
                   height: 5,
                   onPressed: () {
@@ -139,6 +145,9 @@ class _LoginPageState extends State<LoginPage> {
                   ],
                 ),
               ),
+
+
+
 
 
 
